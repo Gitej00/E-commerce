@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#cart">Cart</a></li>
+            <li><a href="#comparison">Comparison</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="banner">
+            <img src="banner.jpg" alt="Banner">
+        </div>
+        <div class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="featuredProducts"></div>
+        </div>
+    </section>
+
+    <section id="shop">
+        <h2>Shop</h2>
+        <div class="product-grid" id="shopProducts"></div>
+    </section>
+
+    <section id="cart">
+        <h2>Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal"></div>
+    </section>
+
+    <section id="comparison">
+        <h2>Price Comparison</h2>
+        <div id="comparisonTable"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
