@@ -8,6 +8,14 @@ body {
     color: #333;
 }
 
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
 nav {
     background-color: #ff3e6c;
     color: white;
@@ -280,3 +288,4 @@ footer {
         margin: 0.3rem 0;
     }
 }
+
