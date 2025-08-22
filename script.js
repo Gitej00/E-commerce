@@ -1,41 +1,39 @@
-', function(e) {
-            e.preventDefault();
-            const targetId = this.get// Expanded product data
+// Expanded product data with image URLs from the web
 const products = [
     // Men's Clothing
-    { id: 1, name: "Men's T-Shirt", description: "Casual cotton t-shirt", price: 999, image: "https://via.placeholder.com/200", category: "men", type: "clothing" },
-    { id: 2, name: "Men's Jeans", description: "Slim fit jeans", price: 1999, image: "https://via.placeholder.com/200", category: "men", type: "clothing" },
-    { id: 3, name: "Men's Formal Shirt", description: "Formal shirt for office wear", price: 1499, image: "https://via.placeholder.com/200", category: "men", type: "clothing" },
-    { id: 4, name: "Men's Casual Shoes", description: "Comfortable casual shoes", price: 2499, image: "https://via.placeholder.com/200", category: "men", type: "shoes" },
-    { id: 5, name: "Men's Sports Shoes", description: "Running shoes with cushioning", price: 3499, image: "https://via.placeholder.com/200", category: "men", type: "shoes" },
+    { id: 1, name: "Men's T-Shirt", description: "Casual cotton t-shirt", price: 999, image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "clothing" },
+    { id: 2, name: "Men's Jeans", description: "Slim fit jeans", price: 1999, image: "https://images.unsplash.com/photo-1541099949237-a9178efd1e1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "clothing" },
+    { id: 3, name: "Men's Formal Shirt", description: "Formal shirt for office wear", price: 1499, image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "clothing" },
+    { id: 4, name: "Men's Casual Shoes", description: "Comfortable casual shoes", price: 2499, image: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "shoes" },
+    { id: 5, name: "Men's Sports Shoes", description: "Running shoes with cushioning", price: 3499, image: "https://images.unsplash.com/photo-1542291026-791e5f334dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "shoes" },
 
     // Women's Clothing
-    { id: 6, name: "Women's Dress", description: "Floral print summer dress", price: 1999, image: "https://via.placeholder.com/200", category: "women", type: "clothing" },
-    { id: 7, name: "Women's Top", description: "Casual top for everyday wear", price: 1299, image: "https://via.placeholder.com/200", category: "women", type: "clothing" },
-    { id: 8, name: "Women's Jeans", description: "Skinny fit jeans", price: 2199, image: "https://via.placeholder.com/200", category: "women", type: "clothing" },
-    { id: 9, name: "Women's Heels", description: "Elegant high heels", price: 2999, image: "https://via.placeholder.com/200", category: "women", type: "shoes" },
-    { id: 10, name: "Women's Flats", description: "Comfortable flats for daily use", price: 1499, image: "https://via.placeholder.com/200", category: "women", type: "shoes" },
+    { id: 6, name: "Women's Dress", description: "Floral print summer dress", price: 1999, image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "clothing" },
+    { id: 7, name: "Women's Top", description: "Casual top for everyday wear", price: 1299, image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "clothing" },
+    { id: 8, name: "Women's Jeans", description: "Skinny fit jeans", price: 2199, image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "clothing" },
+    { id: 9, name: "Women's Heels", description: "Elegant high heels", price: 2999, image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "shoes" },
+    { id: 10, name: "Women's Flats", description: "Comfortable flats for daily use", price: 1499, image: "https://images.unsplash.com/photo-1548032970-70416f827465?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "shoes" },
 
     // Electronics
-    { id: 11, name: "iPhone 15", description: "Latest iPhone model", price: 79900, image: "https://via.placeholder.com/200", category: "electronics", type: "mobile" },
-    { id: 12, name: "MacBook Pro", description: "High-performance laptop", price: 129900, image: "https://via.placeholder.com/200", category: "electronics", type: "laptop" },
-    { id: 13, name: "Sony Headphones", description: "Noise cancelling headphones", price: 12000, image: "https://via.placeholder.com/200", category: "electronics", type: "accessories" },
-    { id: 14, name: "Smart Watch", description: "Fitness tracking smart watch", price: 8999, image: "https://via.placeholder.com/200", category: "electronics", type: "accessories" },
-    { id: 15, name: "Wireless Earbuds", description: "Bluetooth wireless earbuds", price: 3999, image: "https://via.placeholder.com/200", category: "electronics", type: "accessories" },
+    { id: 11, name: "iPhone 15", description: "Latest iPhone model", price: 79900, image: "https://images.unsplash.com/photo-1605787020600-bb22d66a8a5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "electronics", type: "mobile" },
+    { id: 12, name: "MacBook Pro", description: "High-performance laptop", price: 129900, image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "electronics", type: "laptop" },
+    { id: 13, name: "Sony Headphones", description: "Noise cancelling headphones", price: 12000, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "electronics", type: "accessories" },
+    { id: 14, name: "Smart Watch", description: "Fitness tracking smart watch", price: 8999, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "electronics", type: "accessories" },
+    { id: 15, name: "Wireless Earbuds", description: "Bluetooth wireless earbuds", price: 3999, image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "electronics", type: "accessories" },
 
     // Men's Clothing (additional)
-    { id: 16, name: "Men's Hoodie", description: "Warm hoodie for winter", price: 2499, image: "https://via.placeholder.com/200", category: "men", type: "clothing" },
-    { id: 17, name: "Men's Shorts", description: "Casual shorts for summer", price: 1199, image: "https://via.placeholder.com/200", category: "men", type: "clothing" },
-    { id: 18, name: "Men's Jacket", description: "Stylish jacket for winter", price: 3999, image: "https://via.placeholder.com/200", category: "men", type: "clothing" },
-    { id: 19, name: "Men's Sneakers", description: "Trendy sneakers for casual wear", price: 2999, image: "https://via.placeholder.com/200", category: "men", type: "shoes" },
-    { id: 20, name: "Men's Loafers", description: "Formal loafers for office wear", price: 3499, image: "https://via.placeholder.com/200", category: "men", type: "shoes" },
+    { id: 16, name: "Men's Hoodie", description: "Warm hoodie for winter", price: 2499, image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "clothing" },
+    { id: 17, name: "Men's Shorts", description: "Casual shorts for summer", price: 1199, image: "https://images.unsplash.com/photo-1593004045595-5c7207a353c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "clothing" },
+    { id: 18, name: "Men's Jacket", description: "Stylish jacket for winter", price: 3999, image: "https://images.unsplash.com/photo-1506038700629-d42661b32c6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "clothing" },
+    { id: 19, name: "Men's Sneakers", description: "Trendy sneakers for casual wear", price: 2999, image: "https://images.unsplash.com/photo-1542291026-791e5f334dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "shoes" },
+    { id: 20, name: "Men's Loafers", description: "Formal loafers for office wear", price: 3499, image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "men", type: "shoes" },
 
     // Women's Clothing (additional)
-    { id: 21, name: "Women's Kurta", description: "Traditional Indian kurta", price: 1799, image: "https://via.placeholder.com/200", category: "women", type: "clothing" },
-    { id: 22, name: "Women's Leggings", description: "Stretchy leggings for comfort", price: 999, image: "https://via.placeholder.com/200", category: "women", type: "clothing" },
-    { id: 23, name: "Women's Blouse", description: "Silk blouse for traditional wear", price: 1499, image: "https://via.placeholder.com/200", category: "women", type: "clothing" },
-    { id: 24, name: "Women's Sandals", description: "Comfortable sandals for summer", price: 1199, image: "https://via.placeholder.com/200", category: "women", type: "shoes" },
-    { id: 25, name: "Women's Boots", description: "Stylish boots for winter", price: 3999, image: "https://via.placeholder.com/200", category: "women", type: "shoes" }
+    { id: 21, name: "Women's Kurta", description: "Traditional Indian kurta", price: 1799, image: "https://images.unsplash.com/photo-1594631281243-34b3fdfa8f5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "clothing" },
+    { id: 22, name: "Women's Leggings", description: "Stretchy leggings for comfort", price: 999, image: "https://images.unsplash.com/photo-1543081926-066183b4e6d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "clothing" },
+    { id: 23, name: "Women's Blouse", description: "Silk blouse for traditional wear", price: 1499, image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "clothing" },
+    { id: 24, name: "Women's Sandals", description: "Comfortable sandals for summer", price: 1199, image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "shoes" },
+    { id: 25, name: "Women's Boots", description: "Stylish boots for winter", price: 3999, image: "https://images.unsplash.com/photo-1551107696-a0bc6e4e489e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", category: "women", type: "shoes" }
 ];
 
 // Updated comparison data to include more products
@@ -213,7 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle navigation
     document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('clickAttribute('href').substring(1);
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
             document.querySelectorAll('section').forEach(section => {
                 section.style.display = 'none';
             });
@@ -232,4 +232,3 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addToCart = addToCart;
 window.removeFromCart = removeFromCart;
 window.filterProducts = filterProducts;
-
