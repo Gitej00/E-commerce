@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Website</title>
+    <title>Myntra-like E-Commerce Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +18,10 @@
 
     <section id="home">
         <div class="banner">
-            <img src="banner.jpg" alt="Banner">
+            <img src="https://via.placeholder.com/800x200?text=Banner+1+Promotion" alt="Banner 1">
+        </div>
+        <div class="banner">
+            <img src="https://via.placeholder.com/800x200?text=Banner+2+Sale" alt="Banner 2">
         </div>
         <div class="featured-products">
             <h2>Featured Products</h2>
@@ -28,6 +31,12 @@
 
     <section id="shop">
         <h2>Shop</h2>
+        <div class="filters">
+            <button onclick="filterProducts('all')" class="active">All</button>
+            <button onclick="filterProducts('men')">Men</button>
+            <button onclick="filterProducts('women')">Women</button>
+            <button onclick="filterProducts('electronics')">Electronics</button>
+        </div>
         <div class="product-grid" id="shopProducts"></div>
     </section>
 
@@ -42,6 +51,11 @@
         <div id="comparisonTable"></div>
     </section>
 
+    <footer>
+        <p>&copy; 2023 Myntra-like E-Commerce Website. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+
